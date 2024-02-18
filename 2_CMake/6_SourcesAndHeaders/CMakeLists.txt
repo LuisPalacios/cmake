@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.22)
 
 # Definición del proyecto
-project(Proyecto VERSION 1.0.0 LANGUAGES C CXX)
+project(Proyecto VERSION 1.0.1 LANGUAGES C CXX)
 
 # Variables generales importantes para seguir el Standard (en este caso 11)
 set(CMAKE_CXX_STANDARD          11)

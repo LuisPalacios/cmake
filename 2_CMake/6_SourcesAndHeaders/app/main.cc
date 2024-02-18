@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "config.hpp"
+#include "main.h"
 #include "my_lib.h"
 
 int main() {

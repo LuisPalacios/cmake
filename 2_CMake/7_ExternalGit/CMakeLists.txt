@@ -2,8 +2,13 @@
 # CMake de LuisPa
 cmake_minimum_required(VERSION 3.22)
 
+# En este ejemplo mostramos cómo conectar con un submodulo git
+# y usamos el proyecto
+# cd external
+# git submodule add https://github.com/nlohmann/json
+
 # Definición del proyecto
-project(Proyecto VERSION 1.0.0 LANGUAGES C CXX)
+project(Proyecto VERSION 1.0.7 LANGUAGES C CXX)
 
 # Variables generales importantes para seguir el Standard (en este caso 11)
 set(CMAKE_CXX_STANDARD          11)
