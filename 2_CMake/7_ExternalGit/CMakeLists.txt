@@ -3,9 +3,10 @@
 cmake_minimum_required(VERSION 3.22)
 
 # En este ejemplo mostramos cómo conectar con un submodulo git
-# y usamos el proyecto
-# cd external
-# git submodule add https://github.com/nlohmann/json
+#
+# luis:7_ExternalGit (main) % mkdir external
+# luis:7_ExternalGit (main) % git submodule add https://github.com/nlohmann/json external/json
+#
 
 # Definición del proyecto
 project(Proyecto VERSION 1.0.7 LANGUAGES C CXX)
