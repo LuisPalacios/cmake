@@ -17,3 +17,15 @@ void print_hello_world() {
     << NLOHMANN_JSON_VERSION_PATCH << "." << std::endl;
 
 }
+
+/**
+ * @brief Devolver el valor Factorial de un número
+ *
+ * Voy a usar esta fucnión para hacer pruebas de Unit testing
+ *
+ * @param number
+ * @return
+ */
+std::uint32_t factorial( std::uint32_t number ) {
+    return number <= 1 ? number : factorial(number-1)*number;
+}
