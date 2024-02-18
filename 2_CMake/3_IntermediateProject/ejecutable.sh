@@ -4,5 +4,5 @@
 echo
 echo --
 echo
-cd build
+cd build/app
 ./ejecutable

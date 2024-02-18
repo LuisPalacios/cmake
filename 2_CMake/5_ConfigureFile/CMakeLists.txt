@@ -1,0 +1,26 @@
+
+# CMake de LuisPa
+cmake_minimum_required(VERSION 3.22)
+
+# Definición del proyecto
+project(Proyecto VERSION 1.0.0 LANGUAGES C CXX)
+
+# Variables generales importantes para seguir el Standard (en este caso 11)
+set(CMAKE_CXX_STANDARD          11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS        OFF)
+
+# Variables LuisPa
+set(LP_NOMBRE_LIBRERIA Libreria)
+set(LP_NOMBRE_EJECUTABLE Ejecutable)
+
+# Opciones
+option(COMPILA_EJECUTABLE "Whether to compile the executable" OFF)
+
+# Incluye subdirectorios, las dependencias primero.
+add_subdirectory(src)
+if ( COMPILA_EJECUTABLE )
+    add_subdirectory(app)
+else()
+    message("Sin ejecutable - COMPILE_EXECUTABLE OFF ********************************** !!!")
+endif()
