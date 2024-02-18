@@ -20,15 +20,15 @@ set(CMAKE_CXX_EXTENSIONS        OFF)
 set(LP_NOMBRE_LIBRERIA Libreria)
 set(LP_NOMBRE_EJECUTABLE Ejecutable)
 
-# Opciones
-#option(COMPILA_EJECUTABLE "Whether to compile the executable" OFF)
-#if ( COMPILA_EJECUTABLE )
-#    add_subdirectory(app)
-#else()
-#    message("Sin ejecutable")
-#endif()
+# Incluyo los módulos cmake bajo ./cmake
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
+include(AddGitSubmodule)
+
+# Ejecuto las funciones definidas en los ficheros .cmake
+add_git_submodule(external/json)
 
 # Incluye directorios con los fuentes
 add_subdirectory(config)
+add_subdirectory(external)
 add_subdirectory(src)
 add_subdirectory(app)

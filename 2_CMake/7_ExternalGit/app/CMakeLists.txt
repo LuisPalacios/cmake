@@ -11,4 +11,6 @@ add_executable(${LP_NOMBRE_EJECUTABLE}
     ${LP_FUENTES_APP_H})
 
 # Especifico la ubicación de la librería a linkar
-target_link_libraries(${LP_NOMBRE_EJECUTABLE} PUBLIC ${LP_NOMBRE_LIBRERIA})
+target_link_libraries(${LP_NOMBRE_EJECUTABLE} PUBLIC
+    ${LP_NOMBRE_LIBRERIA}
+    nlohmann_json)
