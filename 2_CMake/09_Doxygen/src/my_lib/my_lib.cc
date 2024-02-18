@@ -3,6 +3,11 @@
 #include "my_lib.h"
 #include <nlohmann/json.hpp>
 
+/**
+ * @brief Prints out hello world and tests json
+ *
+ */
+
 void print_hello_world() {
     std::cout << "** LIB  - my_lib.cc ** Hola mundo!" << std::endl;
 

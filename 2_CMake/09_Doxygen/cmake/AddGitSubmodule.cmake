@@ -1,5 +1,8 @@
 #
-# Fichero cmake de apoyo para conectar con librerías externas.
+# Fichero cmake de apoyo
+#
+
+# Objetivo: conectar con librerías externas.
 
 # Creo la función cmake 'add_git_submodule()'
 #

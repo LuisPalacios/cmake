@@ -28,6 +28,7 @@ set(LP_NOMBRE_EJECUTABLE Ejecutable)
 # el respositorio NO es cmake.
 # Creo un módulo cmake bajo ./cmake
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
+# incluye el fichero cmake/AddGitSubmodule.cmake
 include(AddGitSubmodule)
 # Ejecuto las funciones definidas en los ficheros .cmake
 # Lo he comentaado porque lo cargo usando el método 2.
@@ -77,6 +78,10 @@ FetchContent_Declare(
     GIT_TAG v2.13.9
     GIT_SHALLOW TRUE)
 FetchContent_MakeAvailable(Catch2)
+
+# Include de Docs para poder subir a GitHub lo generado por Docxygen
+# incluye el fichero cmake/Docs.cmake
+include(Docs)
 
 # Incluye directorios con los fuentes
 add_subdirectory(config)
