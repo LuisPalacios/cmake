@@ -19,10 +19,6 @@ set(CMAKE_CXX_EXTENSIONS        OFF)
 # Habilito los Unit testing
 option(ENABLE_TESTING "Enable a Unit Testing Build" ON)
 
-# Habilito el tema de Warnings
-option(ENABLE_WARNINGS "Enable to add warnings to a target." ON)
-option(ENABLE_WARNINGS_AS_ERRORS "Enable to treat warnings as errors." OFF)
-
 # Variables LuisPa
 set(LP_NOMBRE_LIBRERIA Libreria)
 set(LP_NOMBRE_EJECUTABLE Ejecutable)
@@ -90,6 +86,26 @@ FetchContent_MakeAvailable(Catch2)
 # Si el usuario quiere warnings custom pues a por ellos
 if(ENABLE_WARNINGS)
     include(Warnings)
+endif()
+
+# Good programmer -> Durante la compilación -> Habilito el tema de Warnings
+# Me creo dos variables para trabajar con esto...
+option(ENABLE_WARNINGS "Enable to add warnings to a target." ON)
+option(ENABLE_WARNINGS_AS_ERRORS "Enable to treat warnings as errors." on)
+
+# Good programmer -> Durante la compilación -> Habilito el tema de Warnings
+# Me creo dos variables para trabajar con esto...
+option(ENABLE_SANITIZE_ADDR "Enable ..." ON)
+option(ENABLE_SANITIZE_UNDEF "Enable ..." ON)
+
+# Si el usuario quiere gestionar los Warnings cargo el Warnings.cmake
+if(ENABLE_WARNINGS)
+    include(Warnings)
+endif()
+
+# Si el usuario quiere hacer Sanitizers cargo el Sanitizers.cmake
+if(ENABLE_SANITIZE_ADDR OR ENABLE_SANITIZE_UNDEF)
+    include(Sanitizers)
 endif()
 
 # Include de Docs para poder subir a GitHub lo generado por Docxygen
