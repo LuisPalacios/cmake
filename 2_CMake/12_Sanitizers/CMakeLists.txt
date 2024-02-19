@@ -106,6 +106,7 @@ endif()
 # Si el usuario quiere hacer Sanitizers cargo el Sanitizers.cmake
 if(ENABLE_SANITIZE_ADDR OR ENABLE_SANITIZE_UNDEF)
     include(Sanitizers)
+    add_sanitizer_flags()
 endif()
 
 # Include de Docs para poder subir a GitHub lo generado por Docxygen
