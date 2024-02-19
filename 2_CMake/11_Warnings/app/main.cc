@@ -12,7 +12,7 @@
 int main() {
 
     // Creo una variable que no uso para ver el tema warnings
-    int i;
+    //int i;
 
 
     std::cout << std::endl;
